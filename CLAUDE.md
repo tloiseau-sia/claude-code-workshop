@@ -60,6 +60,12 @@ npm install && npm run dev
 4. Inventory filters don't support month (no time dimension)
 5. Revenue goals: $800K/month single, $9.6M YTD all months
 
+## Documentation Standards
+- FastAPI endpoints: add a one-line docstring stating purpose and which filters apply; call out non-obvious filter gaps (e.g. inventory has no month filter)
+- Vue components: only comment non-obvious behavior (reactivity workarounds, subtle ordering); don't restate what the code already shows
+- Pydantic models: update field docstrings/comments whenever the corresponding `server/data/*.json` structure changes
+- No comments explaining WHAT code does when names already make it clear - only WHY when it's non-obvious
+
 ## File Locations
 - Views: `client/src/views/*.vue`
 - API Client: `client/src/api.js`
